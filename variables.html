@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <style>
+      body{
+        text-align:center;
+        font-size: 20px;
+      }
+      button{
+        font-size : 15px;
+        padding: 10px;
+        background-color : #f567a9;
+        border-radius:5px;
+        border:none;outline:none;
+        cursor: pointer;
+      }
+
+      button:hover{
+        color: #fff;
+      }
+  </style>
+<h2>Basic JavaScript</h2>
+<p id = "information"></p>
+<script>
+var x = new Date();
+var y = 1997;
+  var thongtin = {
+    firstName : "Nguyễn Văn",
+    lastName : " Cường",
+    tuoi : x.getFullYear() - y,
+  };
+  document.getElementById("information").innerHTML = "Xin chào tên em là : " +  thongtin.firstName + " " + thongtin.lastName + " và năm nay em " + thongtin.tuoi + " tuổi" ;
+</script>
+<button onclick="hienThi()">Bấm vào đây để biết thời gian</button>
+<p id = "abc"></p>
+<script>
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  var x  = "Bây giờ là : " + h + " giờ " + m + " phút " + s + " giây, ";
+  var kimochi = document.getElementById("abc");
+  function hienThi(){
+    if (h >= 12 && h < 17 ){
+      return kimochi.innerHTML = x +   " chúc mọi người buổi chiều vui vẻ.";
+    }
+    else if(h >= 17){
+      return kimochi.innerHTML = x +   " chúc mọi người buổi tối vui vẻ.";
+    }
+    else {
+      return kimochi.innerHTML = x +  " chúc mọi người buổi chiều vui vẻ.";
+    }
+  }
+</script>
+</body>
+</html>
